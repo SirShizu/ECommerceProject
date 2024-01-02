@@ -21,6 +21,24 @@
         height: 700px; /* Adjust the height as needed */
         object-fit: cover;
       }
+
+      .custom-jumbotron {
+        background-color: #f8f9fa;
+      }
+
+      .custom-img-size {
+        width: 400px; /* Set your desired width */
+        height: auto; /* Allow height to adjust proportionally */
+      }
+
+      .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        text-align: center;
+        padding: 10px 0;
+      }
     </style>
   </head>
   <body>
@@ -289,10 +307,40 @@
       </div>
     </div>
 
+    <!-- Image -->
     <div class="container">
-      <h1>Bootstrap Image Example</h1>
-      <img src="ipad.jpg" class="img-fluid" alt="Responsive image" />
+      <img
+        src="ipad.jpg"
+        class="img-fluid custom-img-size"
+        alt="Responsive image"
+      />
     </div>
+
+    <!-- Footer -->
+    <div class="content">
+      <!-- Your website content here -->
+      <h1>Website Content</h1>
+      <p>This is an example of website content.</p>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <!-- First column content -->
+            <span>First Column</span>
+          </div>
+          <div class="col-sm-4">
+            <!-- Second column content -->
+            <span>Second Column</span>
+          </div>
+          <div class="col-sm-4">
+            <!-- Third column content -->
+            <span>Third Column</span>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Bootstrap JS, jQuery, and Popper.js (Optional) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
