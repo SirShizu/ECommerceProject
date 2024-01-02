@@ -10,8 +10,4 @@ public class HomeController {
         return "index";
     }
     
-    @GetMapping("/dummy")
-    public String getDummyPage() {
-        return "dummy";
-    }
 }
