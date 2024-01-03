@@ -1,0 +1,7 @@
+Set the footer
+start working on the creating RestAPI
+Work on authentication
+Work on creating account
+workon my cart feauture
+create page for full details on a product
+pagination of products
