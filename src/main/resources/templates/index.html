@@ -53,6 +53,47 @@
         height: auto; /* Allow height to adjust proportionally */
       }
 
+      .card-custom-img-top {
+        width: 150px;
+        height: 150px; /* Adjust the height as needed */
+        object-fit: contain;
+      }
+
+      .custom-card {
+        padding-top: 50px;
+        padding-left: 3 0px;
+      }
+
+      .custom-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 8px 16px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .custom-card:hover .btn-overlay {
+        opacity: 1;
+      }
+
+      .full-width-line {
+        border: 0;
+        height: 2px; /* Change the thickness of the line if needed */
+        background-color: #000; /* Change the color of the line */
+        width: 15 0%; /* Make the line span the full width */
+      }
+
       .footer {
         position: fixed;
         bottom: 0;
@@ -341,59 +382,47 @@
 
     <div class="container-fluid">
       <div class="row">
-        <!-- First Column: 1 part for 3 vertically aligned cards -->
-        <div class="col-md-4">
+        <!-- First Column: 2 parts -->
+        <div class="col-md-2">
           <div class="row">
             <div class="col-md-12 mb-3">
               <!-- First card -->
-              <div class="card">
+              <div class="custom-card">
                 <img
-                  src="https://via.placeholder.com/300"
-                  class="card-img-top"
+                  src="airpods.jpg"
+                  class="card-custom-img-top"
                   alt="Item 1"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">Item 1</h5>
-                  <p class="card-text">Description of item 1 goes here.</p>
-                  <a href="#" class="btn btn-primary">View details</a>
-                </div>
+                <a href="#" class="btn-overlay">Button</a>
               </div>
             </div>
             <div class="col-md-12 mb-3">
               <!-- Second card -->
-              <div class="card">
+              <div class="custom-card">
                 <img
-                  src="https://via.placeholder.com/300"
-                  class="card-img-top"
+                  src="mobile.jpeg"
+                  class="card-custom-img-top"
                   alt="Item 1"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">Item 1</h5>
-                  <p class="card-text">Description of item 1 goes here.</p>
-                  <a href="#" class="btn btn-primary">View details</a>
-                </div>
+                <a href="#" class="btn-overlay">Button</a>
               </div>
             </div>
             <div class="col-md-12">
               <!-- Third card -->
-              <div class="card">
+              <div class="custom-card">
                 <img
-                  src="https://via.placeholder.com/300"
-                  class="card-img-top"
+                  src="smartwatch.jpg"
+                  class="card-custom-img-top"
                   alt="Item 1"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">Item 1</h5>
-                  <p class="card-text">Description of item 1 goes here.</p>
-                  <a href="#" class="btn btn-primary">View details</a>
-                </div>
+                <a href="#" class="btn-overlay">Button</a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Second Column: 2 parts for the carousel -->
-        <div class="col-md-8">
+        <div class="col-md-10">
           <div
             id="carouselExampleIndicators"
             class="carousel slide"
@@ -459,100 +488,106 @@
     </div>
 
     <!-- jumbotron -->
-    <div class="jumbotron jumbotron-fluid custom-jumbotron">
-      <div class="container text-center">
-        <h1 class="display-4">Welcome to My Website</h1>
-        <p class="lead">This is a simple example of a Bootstrap jumbotron.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <div class="container-fluid" style="padding-top: 10px; padding-left: 120px">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="jumbotron jumbotron-fluid custom-jumbotron">
+            <div class="container">
+              <h5 class="display-4">Trending Products</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center mt-5">
+            <a class="btn btn-secondary btn-lg" href="#" role="button"
+              >More products ></a
+            >
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Cards -->
     <div class="container">
-      <h1 class="mt-4 mb-3">Items Display</h1>
       <div class="row">
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
           <div class="card">
             <img
-              src="https://via.placeholder.com/300"
+              src="products/amazon_echo.jpg"
               class="card-img-top"
               alt="Item 1"
+              style="object-fit: contain"
             />
-            <div class="card-body">
-              <h5 class="card-title">Item 1</h5>
-              <p class="card-text">Description of item 1 goes here.</p>
-              <a href="#" class="btn btn-primary">View details</a>
-            </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
           <div class="card">
             <img
-              src="https://via.placeholder.com/300"
+              src="products/apple_smartwatch.jpg"
               class="card-img-top"
               alt="Item 2"
+              style="object-fit: contain"
             />
-            <div class="card-body">
-              <h5 class="card-title">Item 2</h5>
-              <p class="card-text">Description of item 2 goes here.</p>
-              <a href="#" class="btn btn-primary">View details</a>
-            </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
           <div class="card">
             <img
-              src="https://via.placeholder.com/300"
+              src="products/headphone.jpg"
               class="card-img-top"
-              alt="Item 2"
+              alt="Item 3"
+              style="object-fit: contain"
             />
-            <div class="card-body">
-              <h5 class="card-title">Item 2</h5>
-              <p class="card-text">Description of item 2 goes here.</p>
-              <a href="#" class="btn btn-primary">View details</a>
-            </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
           <div class="card">
             <img
-              src="https://via.placeholder.com/300"
+              src="products/iphone.png"
               class="card-img-top"
-              alt="Item 2"
+              alt="Item 4"
+              style="object-fit: contain"
             />
-            <div class="card-body">
-              <h5 class="card-title">Item 2</h5>
-              <p class="card-text">Description of item 2 goes here.</p>
-              <a href="#" class="btn btn-primary">View details</a>
-            </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6" style="padding-top: 15px">
           <div class="card">
             <img
-              src="https://via.placeholder.com/300"
+              src="products/laptop.jpg"
               class="card-img-top"
-              alt="Item 2"
+              alt="Item 5"
+              style="object-fit: contain"
             />
-            <div class="card-body">
-              <h5 class="card-title">Item 2</h5>
-              <p class="card-text">Description of item 2 goes here.</p>
-              <a href="#" class="btn btn-primary">View details</a>
-            </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6" style="padding-top: 15px">
           <div class="card">
             <img
-              src="https://via.placeholder.com/300"
+              src="products/oled_tv.jpg"
               class="card-img-top"
-              alt="Item 2"
+              alt="Item 6"
+              style="object-fit: contain"
             />
-            <div class="card-body">
-              <h5 class="card-title">Item 2</h5>
-              <p class="card-text">Description of item 2 goes here.</p>
-              <a href="#" class="btn btn-primary">View details</a>
-            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6" style="padding-top: 15px">
+          <div class="card">
+            <img
+              src="products/airpods.jpg"
+              class="card-img-top"
+              alt="Item 7"
+              style="object-fit: contain"
+            />
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6" style="padding-top: 15px">
+          <div class="card">
+            <img
+              src="products/mobile.jpeg"
+              class="card-img-top"
+              alt="Item 8"
+              style="object-fit: contain"
+            />
           </div>
         </div>
       </div>
@@ -572,36 +607,6 @@
       <!-- Your website content here -->
       <h1>Website Content</h1>
       <p>This is an example of website content.</p>
-    </div>
-
-    <!--Carousel -->
-    <div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="microsoft.png" class="d-block w-100" alt="Image 1" />
-        </div>
-        <div class="carousel-item">
-          <img src="amazon.png" class="d-block w-100" alt="Image 2" />
-        </div>
-        <div class="carousel-item">
-          <img src="canon.png" class="d-block w-100" alt="Image 3" />
-        </div>
-        <div class="carousel-item active">
-          <img src="dji.png" class="d-block w-100" alt="Image 1" />
-        </div>
-        <div class="carousel-item">
-          <img src="samsung.png" class="d-block w-100" alt="Image 2" />
-        </div>
-        <div class="carousel-item">
-          <img src="senhesier.png" class="d-block w-100" alt="Image 3" />
-        </div>
-        <div class="carousel-item">
-          <img src="motorola.png" class="d-block w-100" alt="Image 2" />
-        </div>
-        <div class="carousel-item">
-          <img src="sony.png" class="d-block w-100" alt="Image 3" />
-        </div>
-      </div>
     </div>
 
     <footer class="footer">
