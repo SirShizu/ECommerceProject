@@ -87,15 +87,30 @@
         opacity: 1;
       }
 
-      .full-width-line {
-        border: 0;
-        height: 2px; /* Change the thickness of the line if needed */
-        background-color: #000; /* Change the color of the line */
-        width: 15 0%; /* Make the line span the full width */
+      .no-border {
+        border: none; /* Remove border */
+        box-shadow: none; /* Remove any box-shadow */
+      }
+
+      .card-details {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        pointer-events: none; /* Prevent hovering over details */
+      }
+
+      .card:hover .card-details {
+        opacity: 1;
+        pointer-events: auto; /* Enable hovering over details */
       }
 
       .footer {
-        position: fixed;
         bottom: 0;
         width: 100%;
         background-color: #f8f9fa;
@@ -511,110 +526,203 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-6">
-          <div class="card">
+          <div class="card no-border" style="height: 300px">
             <img
               src="products/amazon_echo.jpg"
               class="card-img-top"
               alt="Item 1"
-              style="object-fit: contain"
+              style="object-fit: cover; height: 100%; width: 100%"
             />
+            <div class="card-details">
+              <!-- Details to display on hover -->
+              <p>Product Name</p>
+              <p>Price: $XX.XX</p>
+              <!-- Add more details as needed -->
+            </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="card">
+          <div class="card no-border" style="height: 300px">
             <img
               src="products/apple_smartwatch.jpg"
               class="card-img-top"
               alt="Item 2"
-              style="object-fit: contain"
+              style="object-fit: cover; height: 100%; width: 100%"
             />
+            <div class="card-details">
+              <!-- Details to display on hover -->
+              <p>Product Name</p>
+              <p>Price: $XX.XX</p>
+              <!-- Add more details as needed -->
+            </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="card">
+          <div class="card no-border" style="height: 300px">
             <img
               src="products/headphone.jpg"
               class="card-img-top"
               alt="Item 3"
-              style="object-fit: contain"
+              style="object-fit: cover; height: 100%; width: 100%"
             />
+            <div class="card-details">
+              <!-- Details to display on hover -->
+              <p>Product Name</p>
+              <p>Price: $XX.XX</p>
+              <!-- Add more details as needed -->
+            </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="card">
+          <div class="card no-border" style="height: 300px">
             <img
               src="products/iphone.png"
               class="card-img-top"
               alt="Item 4"
-              style="object-fit: contain"
+              style="object-fit: cover; height: 100%; width: 100%"
             />
+            <div class="card-details">
+              <!-- Details to display on hover -->
+              <p>Product Name</p>
+              <p>Price: $XX.XX</p>
+              <!-- Add more details as needed -->
+            </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6" style="padding-top: 15px">
-          <div class="card">
+          <div class="card no-border" style="height: 300px">
             <img
               src="products/laptop.jpg"
               class="card-img-top"
               alt="Item 5"
-              style="object-fit: contain"
+              style="object-fit: cover; height: 100%; width: 100%"
             />
+            <div class="card-details">
+              <!-- Details to display on hover -->
+              <p>Product Name</p>
+              <p>Price: $XX.XX</p>
+              <!-- Add more details as needed -->
+            </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6" style="padding-top: 15px">
-          <div class="card">
+          <div class="card no-border" style="height: 300px">
             <img
               src="products/oled_tv.jpg"
               class="card-img-top"
               alt="Item 6"
-              style="object-fit: contain"
+              style="object-fit: cover; height: 100%; width: 100%"
             />
+            <div class="card-details">
+              <!-- Details to display on hover -->
+              <p>Product Name</p>
+              <p>Price: $XX.XX</p>
+              <!-- Add more details as needed -->
+            </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6" style="padding-top: 15px">
-          <div class="card">
+          <div class="card no-border" style="height: 300px">
             <img
               src="products/airpods.jpg"
               class="card-img-top"
               alt="Item 7"
-              style="object-fit: contain"
+              style="object-fit: cover; height: 100%; width: 100%"
             />
+            <div class="card-details">
+              <!-- Details to display on hover -->
+              <p>Product Name</p>
+              <p>Price: $XX.XX</p>
+              <!-- Add more details as needed -->
+            </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6" style="padding-top: 15px">
-          <div class="card">
+          <div class="card no-border" style="height: 300px">
             <img
               src="products/mobile.jpeg"
               class="card-img-top"
               alt="Item 8"
-              style="object-fit: contain"
+              style="object-fit: cover; height: 100%; width: 100%"
             />
+            <div class="card-details">
+              <!-- Details to display on hover -->
+              <p>Product Name</p>
+              <p>Price: $XX.XX</p>
+              <!-- Add more details as needed -->
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Image -->
-    <div class="container">
-      <img
-        src="ipad.jpg"
-        class="img-fluid custom-img-size"
-        alt="Responsive image"
-      />
+    <div class="container" style="padding-top: 100px">
+      <div class="row">
+        <div class="col-md-6" style="padding-top: 50px; padding-left: 150px">
+          <p>All new</p>
+          <h2>Last Gen iPad Pro</h2>
+          <p>at discounted price. Hurry up!</p>
+          <button class="btn btn-primary">View Offers ></button>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="ipad.jpg"
+            class="img-fluid custom-img-size"
+            alt="Responsive image"
+          />
+        </div>
+      </div>
     </div>
 
-    <!-- Footer -->
-    <div class="content">
-      <!-- Your website content here -->
-      <h1>Website Content</h1>
-      <p>This is an example of website content.</p>
-    </div>
-
-    <footer class="footer">
+    <footer
+      class="footer"
+      style="padding-top: 100px; background-color: #d3d3d3; color: #212529"
+    >
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
             <!-- First column content -->
-            <span>First Column</span>
+            <span>Shop Departments</span>
+            <ul>
+              Sneakers & Athletic
+            </ul>
+            <ul>
+              Athletic Apparel
+            </ul>
+            <ul>
+              Sandals
+            </ul>
+            <ul>
+              Jeans
+            </ul>
+            <ul>
+              Shirts & Tops
+            </ul>
+            <ul>
+              Shorts
+            </ul>
+            <ul>
+              T-Shirts
+            </ul>
+            <ul>
+              Swimwear
+            </ul>
+            <ul>
+              Clogs & Mules
+            </ul>
+            <ul>
+              Bags & Wallets
+            </ul>
+            <ul>
+              Accessories
+            </ul>
+            <ul>
+              Sunglasses & Eyewear
+            </ul>
+            <ul>
+              Watches
+            </ul>
           </div>
           <div class="col-sm-4">
             <!-- Second column content -->
