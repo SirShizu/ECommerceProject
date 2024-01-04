@@ -350,39 +350,57 @@
                 role="tabpanel"
                 aria-labelledby="signUp-tab"
               >
-                <form>
+                <form
+                  th:action="@{/register}"
+                  th:object="${User}"
+                  method="post"
+                >
                   <!-- Sign Up Form Inputs -->
                   <div class="mb-3">
-                    <label for="usernameSignUp" class="form-label"
-                      >Username:</label
-                    >
+                    <label for="name" class="form-label">Full name:</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="usernameSignUp"
-                      name="usernameSignUp"
+                      id="name"
+                      name="name"
+                      required
+                    />
+                    <label for="username" class="form-label">Username:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="username"
+                      name="username"
                       required
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="passwordSignUp" class="form-label"
-                      >Password:</label
-                    >
+                    <label for="password" class="form-label">Password:</label>
                     <input
                       type="password"
                       class="form-control"
-                      id="passwordSignUp"
-                      name="passwordSignUp"
+                      id="password"
+                      name="password"
                       required
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="emailSignUp" class="form-label">Email:</label>
+                    <label for="email" class="form-label">Email:</label>
                     <input
                       type="email"
                       class="form-control"
-                      id="emailSignUp"
-                      name="emailSignUp"
+                      id="email"
+                      name="email"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone_number" class="form-label">Mobile:</label>
+                    <input
+                      type="phone_number"
+                      class="form-control"
+                      id="phone_number"
+                      name="phone_number"
                       required
                     />
                   </div>

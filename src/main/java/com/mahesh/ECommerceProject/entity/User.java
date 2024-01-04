@@ -18,6 +18,9 @@ public class User {
     @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false, unique = true)
+    private String username;
+
     @Column(nullable = false)
     private String email;
 
@@ -47,6 +50,14 @@ public class User {
         this.name = name;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -69,6 +80,16 @@ public class User {
 
     public void setPhone_number(long phone_number) {
         this.phone_number = phone_number;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id + // replace 'id' with the actual field names in your User class
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                // Include other fields as needed
+                '}';
     }
 
     
